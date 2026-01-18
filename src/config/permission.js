@@ -1,0 +1,31 @@
+const ROLES = {
+  ADMIN: 'ADMIN',
+  TRAINER: 'TRAINER',
+  USER: 'USER'
+};
+
+const PERMISSIONS = {
+  CREATE_USER: 'create_user',
+  VIEW_USER: 'view_user',
+  DELETE_USER: 'delete_user',
+  UPDATE_PROFILE: 'update_profile',
+  VIEW_REPORTS: 'view_reports'
+};
+
+const ROLE_PERMISSIONS = {
+  ADMIN: [
+    PERMISSIONS.CREATE_USER,
+    PERMISSIONS.VIEW_USER,
+    PERMISSIONS.DELETE_USER,
+    PERMISSIONS.VIEW_REPORTS
+  ],
+  TRAINER: [
+    PERMISSIONS.VIEW_USER,
+    PERMISSIONS.UPDATE_PROFILE
+  ],
+  USER: [
+    PERMISSIONS.UPDATE_PROFILE
+  ]
+};
+
+module.exports = { ROLES, PERMISSIONS, ROLE_PERMISSIONS };
