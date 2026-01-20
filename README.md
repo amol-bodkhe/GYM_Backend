@@ -141,3 +141,12 @@ JWT_EXPIRE=7d
 * Deployment (AWS / VPS)
 
 
+mongodb cloud
+mail: amolbodkhe487@gmail.com
+pass: Amol@120797
+
+clustor
+user: AmolB
+pass: Amol120797
+
+
