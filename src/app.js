@@ -31,6 +31,7 @@ app.use(
 ======================= */
 app.use('/api', require('./modules')); // all backend APIs
 
+
 /* =======================
    ANGULAR FRONTEND SERVE
 ======================= */
@@ -38,9 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // This route serves Angular app for all non-API routes
 app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api')) {
-    return next(); // pass to API routes
-  }
+  if (req.path.startsWith('/api')) return next();
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
