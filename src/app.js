@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Angular build file added here and  setup ther=ir routing here.
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
