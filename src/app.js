@@ -11,7 +11,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ['http://localhost:4200'],
+    origin: [ 'http://localhost:4200',
+              'http://ec2-13-126-240-40.ap-south-1.compute.amazonaws.com',
+              'https://ec2-13-126-240-40.ap-south-1.compute.amazonaws.com'
+            ],
     credentials: true
   })
 );
