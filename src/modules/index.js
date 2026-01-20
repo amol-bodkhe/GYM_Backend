@@ -10,7 +10,7 @@ const router = express.Router();
 // router.use('/trainer', require('./trainer/trainer.routes'));
 
 router.use('/user', require('./users/auth.routes'));
-router.get('/membership',async (req,res)=>{
+router.get('/memberships',async (req,res)=>{
     res.status(200).json({result:'success',msg:'Successfully backend API called here..'});
 });
 
